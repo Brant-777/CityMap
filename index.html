@@ -19,6 +19,7 @@
       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
       crossorigin=""
     ></script>
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
 </head>
 <body>
 
@@ -27,14 +28,16 @@
 <script>
 
     var map = L.map('map',{
-    //center: [43.64701, -79.39425],
-    center: [40.71281, -74.00601],
+    center: [43.64701, -79.39425],
     zoom: 15
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    var geojsonLayer = new L.GeoJSON.AJAX("https://www.dropbox.com/s/aeltgunfdh8tptv/us_census_zipcodes.geojson?raw=1");       
+    geojsonLayer.addTo(map);
 
 
 </script>
