@@ -17,4 +17,4 @@ The hyperlink above is a playground created with HTML/Bootstrap 4, Javascript, L
 
 ## References
 
-Polynomial Regression: 
+GIS: 
